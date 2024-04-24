@@ -16,11 +16,4 @@ def welcome(message):
 def reply(message):
     bot.reply_to(message, "that not command")
     
-def send_user_info(message):
-    user_id = int(message.text)
-    user_info = bot.get_chat_member(message.chat.id, user_id)
-    user_first_name = user_info.user.first_name
-    user_username = user_info.user.username
-    bot.reply_to(message, f"username: {user_first_name}\name: @{user_username}")
-
 bot.polling()
