@@ -18,7 +18,6 @@ def reply(message):
 
 def isMsg(message):
     return message.text.isdigit()
-
 @bot.message_handler(func=isMsg)
 def send_user_info(message):
     user_id = int(message.text)
