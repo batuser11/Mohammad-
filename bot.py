@@ -15,5 +15,5 @@ def welcome(message):
 @bot.message_handler(func=isMSg)         
 def reply(message):
     bot.reply_to(message, "that not command")
-    
+
 bot.polling()
