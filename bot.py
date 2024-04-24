@@ -15,10 +15,7 @@ def welcome(message):
 @bot.message_handler(func=isMSg)         
 def reply(message):
     bot.reply_to(message, "that not command")
-
-def isMsg(message):
-    return message.text.isdigit()
-@bot.message_handler(func=isMsg)
+    
 def send_user_info(message):
     user_id = int(message.text)
     user_info = bot.get_chat_member(message.chat.id, user_id)
